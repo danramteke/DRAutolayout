@@ -17,8 +17,8 @@
 		65DC6F511796E0F100F18EC3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DC6F501796E0F100F18EC3 /* Default@2x.png */; };
 		65DC6F531796E0F100F18EC3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DC6F521796E0F100F18EC3 /* Default-568h@2x.png */; };
 		65DC6F561796E0F100F18EC3 /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DC6F551796E0F100F18EC3 /* DRViewController.m */; };
-		65DC6F591796E0F100F18EC3 /* DRViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DC6F571796E0F100F18EC3 /* DRViewController_iPhone.xib */; };
-		65DC6F5C1796E0F100F18EC3 /* DRViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DC6F5A1796E0F100F18EC3 /* DRViewController_iPad.xib */; };
+		65DC6F651796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DC6F641796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m */; };
+		65DC6F681796E36000F18EC3 /* UIView+DRAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DC6F671796E36000F18EC3 /* UIView+DRAutolayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +37,10 @@
 		65DC6F521796E0F100F18EC3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		65DC6F541796E0F100F18EC3 /* DRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
 		65DC6F551796E0F100F18EC3 /* DRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
-		65DC6F581796E0F100F18EC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DRViewController_iPhone.xib; sourceTree = "<group>"; };
-		65DC6F5B1796E0F100F18EC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DRViewController_iPad.xib; sourceTree = "<group>"; };
+		65DC6F631796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+DRAutolayout.h"; path = "DRAutolayout/NSLayoutConstraint+DRAutolayout.h"; sourceTree = "<group>"; };
+		65DC6F641796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+DRAutolayout.m"; path = "DRAutolayout/NSLayoutConstraint+DRAutolayout.m"; sourceTree = "<group>"; };
+		65DC6F661796E36000F18EC3 /* UIView+DRAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+DRAutolayout.h"; path = "DRAutolayout/UIView+DRAutolayout.h"; sourceTree = "<group>"; };
+		65DC6F671796E36000F18EC3 /* UIView+DRAutolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DRAutolayout.m"; path = "DRAutolayout/UIView+DRAutolayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		65DC6F301796E0F100F18EC3 = {
 			isa = PBXGroup;
 			children = (
+				65DC6F621796E16100F18EC3 /* AutolayoutHelpers */,
 				65DC6F421796E0F100F18EC3 /* AutolayoutDemo */,
 				65DC6F3B1796E0F100F18EC3 /* Frameworks */,
 				65DC6F3A1796E0F100F18EC3 /* Products */,
@@ -89,8 +92,6 @@
 				65DC6F4C1796E0F100F18EC3 /* DRAppDelegate.m */,
 				65DC6F541796E0F100F18EC3 /* DRViewController.h */,
 				65DC6F551796E0F100F18EC3 /* DRViewController.m */,
-				65DC6F571796E0F100F18EC3 /* DRViewController_iPhone.xib */,
-				65DC6F5A1796E0F100F18EC3 /* DRViewController_iPad.xib */,
 				65DC6F431796E0F100F18EC3 /* Supporting Files */,
 			);
 			path = AutolayoutDemo;
@@ -108,6 +109,17 @@
 				65DC6F521796E0F100F18EC3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65DC6F621796E16100F18EC3 /* AutolayoutHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				65DC6F631796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.h */,
+				65DC6F641796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m */,
+				65DC6F661796E36000F18EC3 /* UIView+DRAutolayout.h */,
+				65DC6F671796E36000F18EC3 /* UIView+DRAutolayout.m */,
+			);
+			name = AutolayoutHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +178,6 @@
 				65DC6F4F1796E0F100F18EC3 /* Default.png in Resources */,
 				65DC6F511796E0F100F18EC3 /* Default@2x.png in Resources */,
 				65DC6F531796E0F100F18EC3 /* Default-568h@2x.png in Resources */,
-				65DC6F591796E0F100F18EC3 /* DRViewController_iPhone.xib in Resources */,
-				65DC6F5C1796E0F100F18EC3 /* DRViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +191,8 @@
 				65DC6F491796E0F100F18EC3 /* main.m in Sources */,
 				65DC6F4D1796E0F100F18EC3 /* DRAppDelegate.m in Sources */,
 				65DC6F561796E0F100F18EC3 /* DRViewController.m in Sources */,
+				65DC6F651796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m in Sources */,
+				65DC6F681796E36000F18EC3 /* UIView+DRAutolayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,22 +205,6 @@
 				65DC6F461796E0F100F18EC3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		65DC6F571796E0F100F18EC3 /* DRViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				65DC6F581796E0F100F18EC3 /* en */,
-			);
-			name = DRViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		65DC6F5A1796E0F100F18EC3 /* DRViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				65DC6F5B1796E0F100F18EC3 /* en */,
-			);
-			name = DRViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
