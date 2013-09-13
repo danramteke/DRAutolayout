@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DRAutolayout"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "Helper methods for autolayout."
   s.homepage     = "http://github.com/danramteke/DRAutolayout"
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
