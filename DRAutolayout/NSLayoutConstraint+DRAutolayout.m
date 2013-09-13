@@ -123,4 +123,15 @@
 +(NSLayoutConstraint*)bottom:(UIView*)view1 toTop:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant {
     return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeTop multiplier:multiplier constant:constant];
 }
+
+
+
++(NSLayoutConstraint*)height:(UIView*)view1 toConstant:(CGFloat)constant {
+    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:0.0 constant:constant];
+}
++(NSLayoutConstraint*)width:(UIView*)view1 toConstant:(CGFloat)constant {
+    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:0.0 constant:constant];
+}
+
+
 @end

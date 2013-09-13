@@ -28,7 +28,6 @@
     self.scrollView.alwaysBounceVertical = YES;
     self.scrollView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.scrollView];
-
     
     self.redView = [self viewWithColor:[UIColor redColor]];
     [self.scrollView addSubview:self.redView];
@@ -46,34 +45,25 @@
     [self.scrollView addSubview:self.pinkView];
     
     
-    
-
-}
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.title = @"Constraints Demo";
-    
-    
     [self.view addConstraints:@[
      [NSLayoutConstraint top:self.view toTop:self.scrollView],
      [NSLayoutConstraint bottom:self.view toBottom:self.scrollView],
      [NSLayoutConstraint left:self.view toLeft:self.scrollView],
      [NSLayoutConstraint right:self.view toRight:self.scrollView],
      
-     [NSLayoutConstraint left:self.scrollView toLeft:self.redView multiplier:1.0 constant:-10],
-     [NSLayoutConstraint right:self.redView toLeft:self.purpleView multiplier:1.0 constant:10],
-     [NSLayoutConstraint right:self.purpleView toLeft:self.greenView multiplier:1.0 constant:10],
-     [NSLayoutConstraint right:self.greenView toRight:self.scrollView multiplier:1.0 constant:10],
-
+     [NSLayoutConstraint left:self.redView toLeft:self.scrollView multiplier:1.0 constant:10],
+     [NSLayoutConstraint right:self.redView toLeft:self.purpleView multiplier:1.0 constant:-10],
+     [NSLayoutConstraint right:self.purpleView toLeft:self.greenView multiplier:1.0 constant:-10],
+     [NSLayoutConstraint right:self.greenView toRight:self.scrollView multiplier:1.0 constant:-10],
+     
+     
      [NSLayoutConstraint width:self.greenView toWidth:self.redView ],
      [NSLayoutConstraint width:self.purpleView toWidth:self.redView ],
+     [NSLayoutConstraint centerX:self.purpleView toCenterX:self.scrollView],
      
-     [NSLayoutConstraint height:self.redView toHeight:self.scrollView multiplier:0.0 constant:45],
-     [NSLayoutConstraint height:self.purpleView toHeight:self.scrollView multiplier:0.0 constant:45],
-     [NSLayoutConstraint height:self.greenView toHeight:self.scrollView multiplier:0.0 constant:45],
+     [NSLayoutConstraint height:self.redView toConstant:45],
+     [NSLayoutConstraint height:self.purpleView toConstant:45],
+     [NSLayoutConstraint height:self.greenView toConstant:45],
      [NSLayoutConstraint top:self.redView toTop:self.scrollView multiplier:1.0 constant:10],
      [NSLayoutConstraint top:self.purpleView toTop:self.scrollView multiplier:1.0 constant:10],
      [NSLayoutConstraint top:self.greenView toTop:self.scrollView multiplier:1.0 constant:10],
@@ -84,30 +74,32 @@
      [NSLayoutConstraint bottom:self.blueView toTop:self.pinkView],
      [NSLayoutConstraint bottom:self.scrollView toBottom:self.pinkView multiplier:1.0 constant:10],
      
-     [NSLayoutConstraint left:self.scrollView toLeft:self.blueView multiplier:1.0 constant:-10],
-     [NSLayoutConstraint right:self.scrollView toRight:self.blueView multiplier:1.0 constant:10],
-     [NSLayoutConstraint left:self.scrollView toLeft:self.pinkView multiplier:1.0 constant:-10],
-     [NSLayoutConstraint right:self.scrollView toRight:self.pinkView multiplier:1.0 constant:10],
+     [NSLayoutConstraint centerX:self.pinkView toCenterX:self.scrollView],
+     [NSLayoutConstraint width:self.pinkView toWidth:self.scrollView multiplier:1.0 constant:-20],
+     [NSLayoutConstraint centerX:self.blueView toCenterX:self.scrollView],
+     [NSLayoutConstraint width:self.blueView toWidth:self.scrollView multiplier:1.0 constant:-20],
      
-     [NSLayoutConstraint height:self.pinkView toHeight:self.scrollView multiplier:0.0 constant:45],
-     [NSLayoutConstraint height:self.blueView toHeight:self.scrollView multiplier:0.0 constant:545],
+     
+     [NSLayoutConstraint height:self.pinkView toConstant:65],
+     [NSLayoutConstraint height:self.blueView toConstant:545],
      ]];
-    
-    
-    
-    
-    
-    
+
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"Constraints Demo";
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-
     [self logFrame:self.redView name:@"red view"];
     [self logFrame:self.purpleView name:@"purple view"];
     [self logFrame:self.greenView name:@"green view"];
     [self logFrame:self.blueView name:@"blue view"];
     [self logFrame:self.pinkView name:@"pink view"];
     
+    [self logFrame:self.scrollView name:@"scroll view"];
 }
 
 -(void)logFrame:(UIView*)aView name:(NSString*)name {
@@ -122,6 +114,5 @@
     v.translatesAutoresizingMaskIntoConstraints = NO;
     return v;
 }
-
 
 @end

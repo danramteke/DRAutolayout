@@ -46,4 +46,7 @@
 
 +(NSLayoutConstraint*)top:(UIView*)view1 toBottom:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
 +(NSLayoutConstraint*)bottom:(UIView*)view1 toTop:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
+
++(NSLayoutConstraint*)height:(UIView*)view1 toConstant:(CGFloat)constant;
++(NSLayoutConstraint*)width:(UIView*)view1 toConstant:(CGFloat)constant;
 @end
