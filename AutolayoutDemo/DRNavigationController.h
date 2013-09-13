@@ -1,5 +1,5 @@
 //
-//  DRViewController.h
+//  DRNavigationController.h
 //  AutolayoutDemo
 //
 //  Created by Daniel R on 9/13/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DRViewController : UIViewController
+@interface DRNavigationController : UITableViewController
 
 @end

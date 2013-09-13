@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6517ECBE17E389E7003E6868 /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517ECBD17E389E7003E6868 /* DRViewController.m */; };
+		659C07AC17E38DA300B47DBE /* DRConstraintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659C07AB17E38DA300B47DBE /* DRConstraintsViewController.m */; };
+		659C07AF17E38E4400B47DBE /* DRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659C07AE17E38E4400B47DBE /* DRNavigationController.m */; };
 		65DC6F3D1796E0F100F18EC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DC6F3C1796E0F100F18EC3 /* UIKit.framework */; };
 		65DC6F3F1796E0F100F18EC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DC6F3E1796E0F100F18EC3 /* Foundation.framework */; };
 		65DC6F411796E0F100F18EC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DC6F401796E0F100F18EC3 /* CoreGraphics.framework */; };
@@ -23,8 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6517ECBC17E389E7003E6868 /* DRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
-		6517ECBD17E389E7003E6868 /* DRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
+		659C07AA17E38DA300B47DBE /* DRConstraintsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRConstraintsViewController.h; sourceTree = "<group>"; };
+		659C07AB17E38DA300B47DBE /* DRConstraintsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRConstraintsViewController.m; sourceTree = "<group>"; };
+		659C07AD17E38E4400B47DBE /* DRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRNavigationController.h; sourceTree = "<group>"; };
+		659C07AE17E38E4400B47DBE /* DRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRNavigationController.m; sourceTree = "<group>"; };
 		65DC6F391796E0F100F18EC3 /* AutolayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DC6F3C1796E0F100F18EC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65DC6F3E1796E0F100F18EC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,9 +98,11 @@
 				65DC6F4C1796E0F100F18EC3 /* DRAppDelegate.m */,
 				65DC6F541796E0F100F18EC3 /* DRFlowViewController.h */,
 				65DC6F551796E0F100F18EC3 /* DRFlowViewController.m */,
+				659C07AA17E38DA300B47DBE /* DRConstraintsViewController.h */,
+				659C07AB17E38DA300B47DBE /* DRConstraintsViewController.m */,
 				65DC6F431796E0F100F18EC3 /* Supporting Files */,
-				6517ECBC17E389E7003E6868 /* DRViewController.h */,
-				6517ECBD17E389E7003E6868 /* DRViewController.m */,
+				659C07AD17E38E4400B47DBE /* DRNavigationController.h */,
+				659C07AE17E38E4400B47DBE /* DRNavigationController.m */,
 			);
 			path = AutolayoutDemo;
 			sourceTree = "<group>";
@@ -198,7 +203,8 @@
 				65DC6F561796E0F100F18EC3 /* DRFlowViewController.m in Sources */,
 				65DC6F651796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m in Sources */,
 				65DC6F681796E36000F18EC3 /* UIView+DRAutolayout.m in Sources */,
-				6517ECBE17E389E7003E6868 /* DRViewController.m in Sources */,
+				659C07AC17E38DA300B47DBE /* DRConstraintsViewController.m in Sources */,
+				659C07AF17E38E4400B47DBE /* DRNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
