@@ -20,6 +20,14 @@
 
 @implementation DRConstraintsViewController
 
+-(id)init {
+    self = [super init];
+    if (self) {
+        self.title = @"Constraints Demo";
+    }
+    return self;
+}
+
 -(void)loadView {
     self.view = [[UIView alloc] init];
     
@@ -43,8 +51,12 @@
     
     self.pinkView = [self viewWithColor:[UIColor colorWithRed:255/255.0 green:105.0/255.0 blue:180.0/255.0 alpha:1]];
     [self.scrollView addSubview:self.pinkView];
-    
-    
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
     [self.view addConstraints:@[
      [NSLayoutConstraint top:self.view toTop:self.scrollView],
      [NSLayoutConstraint bottom:self.view toBottom:self.scrollView],
@@ -83,13 +95,6 @@
      [NSLayoutConstraint height:self.pinkView toConstant:65],
      [NSLayoutConstraint height:self.blueView toConstant:545],
      ]];
-
-}
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.title = @"Constraints Demo";
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -105,8 +110,6 @@
 -(void)logFrame:(UIView*)aView name:(NSString*)name {
     NSLog(@"%@ - Origin: (%f,%f); Size (%f,%f)" ,name, aView.frame.origin.x,aView.frame.origin.y, aView.frame.size.width, aView.frame.size.height);
 }
-
-
 
 -(UIView*)viewWithColor:(UIColor*)color {
     UIView* v = [[UIView alloc] init];
