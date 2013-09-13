@@ -8,6 +8,7 @@
 
 #import "DRAppDelegate.h"
 
+#import "DRFlowViewController.h"
 #import "DRViewController.h"
 
 @implementation DRAppDelegate
@@ -15,8 +16,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[DRViewController alloc] init];
-    self.window.rootViewController = self.viewController;
+    self.flowViewController = [[DRFlowViewController alloc] init];
+    self.nav = [[UINavigationController alloc] initWithRootViewController:self.flowViewController];
+    self.window.rootViewController = self.flowViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

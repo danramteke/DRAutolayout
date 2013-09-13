@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class DRViewController;
+@class DRFlowViewController;
 
 @interface DRAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) DRViewController *viewController;
-
+@property (strong, nonatomic) UINavigationController *nav;
+@property (strong, nonatomic) DRFlowViewController *flowViewController;
 @end

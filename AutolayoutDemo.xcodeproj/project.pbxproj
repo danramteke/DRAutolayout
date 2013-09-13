@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6517ECBE17E389E7003E6868 /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517ECBD17E389E7003E6868 /* DRViewController.m */; };
 		65DC6F3D1796E0F100F18EC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DC6F3C1796E0F100F18EC3 /* UIKit.framework */; };
 		65DC6F3F1796E0F100F18EC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DC6F3E1796E0F100F18EC3 /* Foundation.framework */; };
 		65DC6F411796E0F100F18EC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DC6F401796E0F100F18EC3 /* CoreGraphics.framework */; };
@@ -16,12 +17,14 @@
 		65DC6F4F1796E0F100F18EC3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DC6F4E1796E0F100F18EC3 /* Default.png */; };
 		65DC6F511796E0F100F18EC3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DC6F501796E0F100F18EC3 /* Default@2x.png */; };
 		65DC6F531796E0F100F18EC3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DC6F521796E0F100F18EC3 /* Default-568h@2x.png */; };
-		65DC6F561796E0F100F18EC3 /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DC6F551796E0F100F18EC3 /* DRViewController.m */; };
+		65DC6F561796E0F100F18EC3 /* DRFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DC6F551796E0F100F18EC3 /* DRFlowViewController.m */; };
 		65DC6F651796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DC6F641796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m */; };
 		65DC6F681796E36000F18EC3 /* UIView+DRAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DC6F671796E36000F18EC3 /* UIView+DRAutolayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6517ECBC17E389E7003E6868 /* DRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
+		6517ECBD17E389E7003E6868 /* DRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
 		65DC6F391796E0F100F18EC3 /* AutolayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutolayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DC6F3C1796E0F100F18EC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65DC6F3E1796E0F100F18EC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,8 +38,8 @@
 		65DC6F4E1796E0F100F18EC3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		65DC6F501796E0F100F18EC3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		65DC6F521796E0F100F18EC3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		65DC6F541796E0F100F18EC3 /* DRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
-		65DC6F551796E0F100F18EC3 /* DRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
+		65DC6F541796E0F100F18EC3 /* DRFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRFlowViewController.h; sourceTree = "<group>"; };
+		65DC6F551796E0F100F18EC3 /* DRFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRFlowViewController.m; sourceTree = "<group>"; };
 		65DC6F631796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+DRAutolayout.h"; path = "DRAutolayout/NSLayoutConstraint+DRAutolayout.h"; sourceTree = "<group>"; };
 		65DC6F641796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+DRAutolayout.m"; path = "DRAutolayout/NSLayoutConstraint+DRAutolayout.m"; sourceTree = "<group>"; };
 		65DC6F661796E36000F18EC3 /* UIView+DRAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+DRAutolayout.h"; path = "DRAutolayout/UIView+DRAutolayout.h"; sourceTree = "<group>"; };
@@ -90,9 +93,11 @@
 			children = (
 				65DC6F4B1796E0F100F18EC3 /* DRAppDelegate.h */,
 				65DC6F4C1796E0F100F18EC3 /* DRAppDelegate.m */,
-				65DC6F541796E0F100F18EC3 /* DRViewController.h */,
-				65DC6F551796E0F100F18EC3 /* DRViewController.m */,
+				65DC6F541796E0F100F18EC3 /* DRFlowViewController.h */,
+				65DC6F551796E0F100F18EC3 /* DRFlowViewController.m */,
 				65DC6F431796E0F100F18EC3 /* Supporting Files */,
+				6517ECBC17E389E7003E6868 /* DRViewController.h */,
+				6517ECBD17E389E7003E6868 /* DRViewController.m */,
 			);
 			path = AutolayoutDemo;
 			sourceTree = "<group>";
@@ -190,9 +195,10 @@
 			files = (
 				65DC6F491796E0F100F18EC3 /* main.m in Sources */,
 				65DC6F4D1796E0F100F18EC3 /* DRAppDelegate.m in Sources */,
-				65DC6F561796E0F100F18EC3 /* DRViewController.m in Sources */,
+				65DC6F561796E0F100F18EC3 /* DRFlowViewController.m in Sources */,
 				65DC6F651796E2AC00F18EC3 /* NSLayoutConstraint+DRAutolayout.m in Sources */,
 				65DC6F681796E36000F18EC3 /* UIView+DRAutolayout.m in Sources */,
+				6517ECBE17E389E7003E6868 /* DRViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +315,7 @@
 				65DC6F611796E0F100F18EC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
