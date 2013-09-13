@@ -40,4 +40,10 @@
 
 +(NSLayoutConstraint*)left:(UIView*)view1 toRight:(UIView*)view2;
 +(NSLayoutConstraint*)right:(UIView*)view1 toLeft:(UIView*)view2;
+
++(NSLayoutConstraint*)top:(UIView*)view1 toBottom:(UIView*)view2;
++(NSLayoutConstraint*)bottom:(UIView*)view1 toTop:(UIView*)view2;
+
++(NSLayoutConstraint*)top:(UIView*)view1 toBottom:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)bottom:(UIView*)view1 toTop:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
 @end

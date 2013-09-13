@@ -31,7 +31,7 @@
 }
 
 +(NSLayoutConstraint*)bottom:(UIView*)view1 toBottom:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant {
-    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeTop multiplier:multiplier constant:constant];
+    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeBottom multiplier:multiplier constant:constant];
 }
 
 +(NSLayoutConstraint*)left:(UIView*)view1 toLeft:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant {
@@ -68,13 +68,12 @@
 }
 
 
-
 +(NSLayoutConstraint*)top:(UIView*)view1 toTop:(UIView*)view2{
     return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
 }
 
 +(NSLayoutConstraint*)bottom:(UIView*)view1 toBottom:(UIView*)view2 {
-    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
 }
 
 +(NSLayoutConstraint*)left:(UIView*)view1 toLeft:(UIView*)view2 {
@@ -109,4 +108,19 @@
     return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0];
 }
 
+
++(NSLayoutConstraint*)top:(UIView*)view1 toBottom:(UIView*)view2{
+    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
+}
+
++(NSLayoutConstraint*)bottom:(UIView*)view1 toTop:(UIView*)view2 {
+    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+}
+
++(NSLayoutConstraint*)top:(UIView*)view1 toBottom:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant {
+    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeBottom multiplier:multiplier constant:constant];
+}
++(NSLayoutConstraint*)bottom:(UIView*)view1 toTop:(UIView*)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant {
+    return [NSLayoutConstraint constraintWithItem:view1 attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view2 attribute:NSLayoutAttributeTop multiplier:multiplier constant:constant];
+}
 @end

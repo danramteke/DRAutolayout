@@ -74,13 +74,6 @@
 {
     [super viewDidLoad];
 	self.title = @"Flow Demo";
-//    self.navigationItem.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
