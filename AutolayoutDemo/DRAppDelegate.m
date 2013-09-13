@@ -18,7 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.flowViewController = [[DRFlowViewController alloc] init];
     self.nav = [[UINavigationController alloc] initWithRootViewController:self.flowViewController];
-    self.window.rootViewController = self.flowViewController;
+    self.window.rootViewController = self.nav;
     [self.window makeKeyAndVisible];
     return YES;
 }

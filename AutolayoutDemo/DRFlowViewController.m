@@ -18,7 +18,6 @@
 
 -(void)loadView {
     self.view = [[UIView alloc] init];
-    self.view.translatesAutoresizingMaskIntoConstraints = NO;
     
     UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
     scrollView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -74,7 +73,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	self.title = @"Flow Demo";
 }
 
 - (void)didReceiveMemoryWarning
