@@ -9,50 +9,46 @@ Autolayout helps layout views. It's really neat! But it is also kind of wordy. H
 Example use in loadView:
 
 ```
--(void)loadView {
-    self.view = [[UIView alloc] init];
-    self.view.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
-    scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    scrollView.alwaysBounceVertical = YES;
-    scrollView.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:scrollView];
-    [self.view constrainToAllEdges:scrollView];
-    
-    UILabel* top = [self labelWithText:@"Top"];
-    UILabel* right = [self labelWithText:@"Right"];
-    UILabel* bottom = [self labelWithText:@"Bottom"];
-    UILabel* left = [self labelWithText:@"Left"];
-    UILabel* center = [self labelWithText:@"Center"];
-    UILabel* center1 = [self labelWithText:@"Center 1"];
-    UILabel* center2 = [self labelWithText:@"Center 2"];
-    UILabel* center3 = [self labelWithText:@"Center 3"];
-    UILabel* center4 = [self labelWithText:@"Center 4"];
-    
-    [scrollView addSubview:top];
-    [scrollView addSubview:right];
-    [scrollView addSubview:bottom];
-    [scrollView addSubview:left];
-    [scrollView addSubview:center];
-    [scrollView addSubview:center1];
-    [scrollView addSubview:center2];
-    [scrollView addSubview:center3];
-    [scrollView addSubview:center4];
-    
-    [scrollView placeAtTop:top distance:5];
-    [scrollView place:center below:top distance:200];
-    [scrollView place:center1 below:center distance:200];
-    [scrollView place:center2 below:center1 distance:200];
-    [scrollView place:center3 below:center2 distance:200];
-    [scrollView place:center4 below:center3 distance:200];
-    [scrollView place:bottom below:center4 distance:200];
-    [scrollView placeAtBottom:bottom distance:5];
-    
-    [scrollView place:left leftOf:center distance:40];
-    [scrollView place:right rightOf:center1 distance:40];
-    [scrollView horizontallyCenterSubviews:@[top, center, center1, center2, center3, center4, bottom]];
-}
++(NSLayoutConstraint*)centerX:(id)view1 toCenterX:(id)view2;
++(NSLayoutConstraint*)centerY:(id)view1 toCenterY:(id)view2;
++(NSLayoutConstraint*)centerY:(id)view1 toCenterY:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)centerX:(id)view1 toCenterX:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
+
++(NSLayoutConstraint*)top:(id)view1 toTop:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)bottom:(id)view1 toBottom:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)left:(id)view1 toLeft:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)right:(id)view1 toRight:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)width:(id)view1 toWidth:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)height:(id)view1 toHeight:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)height:(id)view1 toWidth:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)width:(id)view1 toHeight:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
+
++(NSLayoutConstraint*)top:(id)view1 toTop:(id)view2;
++(NSLayoutConstraint*)bottom:(id)view1 toBottom:(id)view2;
++(NSLayoutConstraint*)left:(id)view1 toLeft:(id)view2;
++(NSLayoutConstraint*)right:(id)view1 toRight:(id)view2;
++(NSLayoutConstraint*)width:(id)view1 toWidth:(id)view2;
++(NSLayoutConstraint*)height:(id)view1 toHeight:(id)view2;
++(NSLayoutConstraint*)height:(id)view1 toWidth:(id)view2;
++(NSLayoutConstraint*)width:(id)view1 toHeight:(id)view2;
+
+
+
+
++(NSLayoutConstraint*)left:(id)view1 toRight:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)right:(id)view1 toLeft:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
+
++(NSLayoutConstraint*)left:(id)view1 toRight:(id)view2;
++(NSLayoutConstraint*)right:(id)view1 toLeft:(id)view2;
+
++(NSLayoutConstraint*)top:(id)view1 toBottom:(id)view2;
++(NSLayoutConstraint*)bottom:(id)view1 toTop:(id)view2;
+
++(NSLayoutConstraint*)top:(id)view1 toBottom:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
++(NSLayoutConstraint*)bottom:(id)view1 toTop:(id)view2 multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
+
++(NSLayoutConstraint*)height:(id)view1 toConstant:(CGFloat)constant;
++(NSLayoutConstraint*)width:(id)view1 toConstant:(CGFloat)constant;
 ```
 
 This example code is lifted from the included demo project.
