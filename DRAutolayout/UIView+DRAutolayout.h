@@ -13,6 +13,7 @@
 -(void)placeAtBottom:(UIView*)subview distance:(CGFloat)distance;
 
 -(void)constrainWidth:(UIView*)subview delta:(CGFloat)delta;
+-(void)constrainAspectRatio:(float)aspectRatio;
 
 -(void)place:(UIView*)bottom below:(UIView*)top distance:(CGFloat)distance;
 -(void)place:(UIView*)left leftOf:(UIView*)right distance:(CGFloat)distance;
@@ -22,4 +23,5 @@
 -(void)horizontallyCenterSubview:(UIView*)subview;
 -(void)horizontallyCenterSubviews:(NSArray*)subviews;
 -(void)constrainToAllEdges:(UIView*)subview;
+
 @end
