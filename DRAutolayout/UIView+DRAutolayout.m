@@ -21,6 +21,11 @@
     [self addConstraint:[NSLayoutConstraint constraintWithItem:subview attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:1.0 constant:delta]];
 }
 
+- (void)constrainAspectRatio:(float)aspectRatio {
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:aspectRatio constant:0]];
+}
+
+
 -(void)place:(UIView*)bottom below:(UIView*)top distance:(CGFloat)distance {
     [self addConstraint:[NSLayoutConstraint constraintWithItem:bottom attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:top attribute:NSLayoutAttributeBottom multiplier:1.0 constant:distance]];
 }
